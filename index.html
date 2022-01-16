@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Parallax</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header id="header">
+            <a href="#" class="logo">Jungle</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Destination</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <section>
+            <h2 id="text"><span>It's time for a new</span><br>Adventure</h2>
+            <img src="img/bird1.png" id="bird1">
+            <img src="img/bird2.png" id="bird2">
+            <img src="img/forest.png" id="forest">
+            <a href="#" id="btn">Explore</a>
+
+            <img src="img/rocks.png" id="rocks">
+            <img src="img/water.png" id="water">
+        </section>
+        <div class="sec">
+            <h2>Parallax Scrolling Effects</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                Est iusto tempora a quam inventore commodi fugiat, aliquid 
+                ratione incidunt dignissimos laboriosam odit, sapiente eius 
+                consequuntur consequatur et quidem ipsam? Recusandae, 
+                sed explicabo? Praesentium laborum placeat unde impedit, 
+                quis vero earum, eveniet facilis dolor optio magni minus 
+                aperiam cupiditate mollitia possimus fuga quod nihil, 
+                exercitationem temporibus a corporis animi? <br><br> Modi iste 
+                delectus voluptatum voluptates non expedita incidunt 
+                possimus explicabo, impedit nam, unde maiores, error ut 
+                placeat reiciendis laborum quis necessitatibus ea. Eum 
+                enim est dicta officiis at totam, vitae architecto eligendi 
+                officia rem perspiciatis molestiae. Mollitia iusto, 
+                accusamus fugit ipsam pariatur obcaecati expedita, 
+                excepturi laborum quaerat nostrum rem dolore cumque 
+                doloremque veritatis voluptates fugiat debitis repudiandae 
+                ipsum minima quis dicta? <br><br> Harum delectus eaque tempore 
+                explicabo asperiores! Fugiat culpa maiores modi nostrum 
+                accusamus corrupti pariatur quos mollitia magnam nobis 
+                error eius blanditiis harum ipsum numquam, cumque a nulla 
+                similique voluptates beatae illum? <br><br> Harum ratione corrupti 
+                dolores, reprehenderit modi deleniti eius, minima ad veniam 
+                cumque distinctio inventore error saepe. Voluptatibus 
+                pariatur ab repellat, at cumque exercitationem quisquam 
+                ad laboriosam velit asperiores est, quod maiores impedit 
+                nemo, consequatur ipsum rem labore ipsam et dolores quae. 
+                Voluptates quos aliquam unde vero cum. <br><br> Recusandae et saepe 
+                non! Laudantium animi laboriosam quas doloremque iure culpa,
+                 odio tenetur. Soluta porro illum doloribus ullam 
+                 voluptatibus cumque mollitia ducimus vel natus 
+                 blanditiis exercitationem corrupti perferendis cupiditate 
+                 sed nostrum quis velit adipisci corporis odit cum, aut 
+                 veritatis. <br><br> Obcaecati corrupti placeat vero necessitatibus 
+                 maiores aliquid incidunt explicabo voluptas quas. Veniam 
+                 repellat dicta iure quos vel illo quas quo magni dolore. 
+                 Harum aliquid minus aut eligendi libero nobis nesciunt, 
+                 corrupti distinctio non ut quae culpa, totam labore 
+                 voluptas quam facilis voluptatem deleniti fugiat vitae modi
+                  quos architecto voluptatibus obcaecati doloribus. Eos, 
+                  aliquam odit corporis, dolore ut optio, fuga numquam minus 
+                  minima sequi totam?</p>
+        </div>
+        <script>
+            let text = document.getElementById('text');
+            let bird1 = document.getElementById('bird1');
+            let bird2 = document.getElementById('bird2');
+            let btn = document.getElementById('btn');
+            let rocks = document.getElementById('rocks');
+            let forest = document.getElementById('forest');
+            let water = document.getElementById('water');
+            let header = document.getElementById('header');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+
+                text.style.top = 50 + value * -0.5 + '%';
+                bird1.style.top = value * -1.5 + 'px';
+                bird1.style.left = value * 2 + 'px';
+                bird2.style.top = value * -1.5 + 'px';
+                bird2.style.left = value * -5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                rocks.style.top = value * -0.12 + 'px';
+                forest.style.top = value * 0.25 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+    </body>
+</html>
